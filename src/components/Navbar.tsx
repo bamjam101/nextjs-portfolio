@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { styles } from "@/app/styles";
 import { navLinks } from "@/constants";
-import { menu, close } from "@/assets";
+import { menu, close } from "@/app/assets";
 import Image from "next/image";
 
 const Navbar = () => {
