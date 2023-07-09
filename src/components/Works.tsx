@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 import { styles } from "@/app/styles";
-import { github } from "@/app/assets";
+import { github, link } from "@/app/assets";
 import { SectionWrapper } from "@/hoc";
 import { projects } from "@/constants";
 import { fadeIn, textVariant } from "@/utils/motion";
@@ -22,6 +22,7 @@ type ProjectCardProps = {
     }[];
     image: StaticImageData;
     source_code_link: string;
+    web_url: string;
   };
 };
 
@@ -31,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
       <Tilt className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
         <div className="relative w-full h-[230px]">
           <Image fill src={project.image} alt="Project Image" />
-          <div className="absolute inset-0 flex justify-end m-3 card-image_hover">
+          <div className="absolute inset-0 flex justify-end m-3 card-image_hover gap-2">
             <div
               onClick={() => window.open(project.source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -45,15 +46,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
               />
             </div>
             <div
-              onClick={() => window.open(project.source_code_link, "_blank")}
+              onClick={() => window.open(project.web_url, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <Image
                 width={20}
                 height={20}
-                src={github}
+                src={link}
                 alt="Github"
-                className="hover:scale-105"
+                className="hover:scale-105 rounded-full"
               />
             </div>
           </div>

@@ -18,6 +18,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import mobile from "./mobile.png";
+import tedx from "./tedx.png";
 
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
@@ -26,12 +28,28 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import reddit from "./reddit.png";
+import messenger from "./messenger.png";
+import netflix from "./netflix.png";
+import baytrend from "./baytrend.png";
+import spotify from "./spotify.png";
+import quimzz from "./quimzz.png";
+
+import link from "./link.png";
+
 export {
   logo,
   backend,
   creator,
   web,
   github,
+  reddit,
+  messenger,
+  baytrend,
+  netflix,
+  spotify,
+  quimzz,
+  link,
   menu,
   close,
   css,
@@ -44,8 +62,10 @@ export {
   reactjs,
   redux,
   tailwind,
+  tedx,
   typescript,
   threejs,
+  mobile,
   starbucks,
   tesla,
   carrent,

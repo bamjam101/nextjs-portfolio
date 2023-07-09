@@ -13,11 +13,14 @@ import {
   mongodb,
   git,
   figma,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  tedx,
+  mobile,
+  reddit,
+  messenger,
+  baytrend,
+  netflix,
+  spotify,
+  quimzz,
   threejs,
 } from "../app/assets";
 
@@ -29,6 +32,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "project",
+    title: "Project",
   },
   {
     id: "contact",
@@ -106,7 +113,7 @@ const experiences = [
   {
     title: "Full stack Developer (MERN)",
     company_name: "Outsourced Work",
-    icon: starbucks,
+    icon: mobile,
     iconBg: "#383E56",
     date: "Dec 2022 - Feb 2023",
     points: [
@@ -119,7 +126,7 @@ const experiences = [
   {
     title: "ReactJS Developer",
     company_name: "TEDxACE",
-    icon: tesla,
+    icon: tedx,
     iconBg: "#E6DEDD",
     date: "Feb 2023 - March 2023",
     points: [
@@ -140,32 +147,47 @@ const testimonials = [
     company: "Acme Co",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Reddit Clone",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A replication of Reddit with subset of features integrated to provide a full-stack experience. Get indulged in community activities much like Reddit subreddit and browse across posts relating to different subreddit.",
     tags: [
       {
-        name: "react",
+        name: "next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "recoil",
+        color: "blue-text-gradient",
+      },
+      { name: "chakra", color: "green-text-gradient" },
+    ],
+    image: reddit,
+    source_code_link: "https://github.com/bamjam101/nextjs-reddit-clone",
+    web_url: "https://nextjs-reddit-clone-60nrmxvqb-bamjam101.vercel.app",
+  },
+  {
+    name: "Real-time Messenger Clone",
+    description:
+      "A full-stack implementation of messenger web application that provides user interface following responsive design with real-time sending and receiving of messages.",
+    tags: [
+      {
+        name: "next",
         color: "blue-text-gradient",
       },
       {
@@ -173,54 +195,113 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "prisma",
         color: "pink-text-gradient",
       },
+      {
+        name: "nodejs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "pusher",
+        color: "green-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: messenger,
+    source_code_link: "https://github.com/bamjam101/nextjs-messenger-clone",
+    web_url: "https://nextjs-messenger-clone-flame.vercel.app",
   },
   {
-    name: "Job IT",
+    name: "Netflix Clone",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A lite build of Neflix with features to facilitate users to watch movie previews being fetched from TMDB library mapping to Youtube trailer videos. Enjoy creating user profiles and switching between them as per liking due optimized state management.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "contextapi",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
+        name: "tmdbapi",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "typescript",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: netflix,
+    source_code_link: "https://github.com/bamjam101/netflix-clone",
+    web_url: "https://netflix-clone-dev-js.netlify.app/",
+  },
+  {
+    name: "Baytrend - Ecommerce Site",
+    description:
+      "An E-commerce site which effectively fetches data from fakestore API and displays beautifully using Material UI Design Components. The site features a feed where users can select items and add them to cart which is stored in store and locally on client machine using Redux Toolkit.",
+    tags: [
+      {
+        name: "react",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MUI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: baytrend,
+    source_code_link: "https://github.com/bamjam101/baytrend-ecommerce-app",
+    web_url: "https://baytrend-dev-js.netlify.app/",
+  },
+  {
+    name: "Spotify Clone",
+    description:
+      "A music streaming application totally build using Vanilla JavaScript and Tailwindcss. The application requires users to have an API key for themselves using which they can authenticate their own Spotify account and fetch data as per their preference in a secure manner. The application features fetching of playlists and playing of music preview (30 second preview) out of those playlist.",
+    tags: [
+      {
+        name: "Vite",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Vanilla JavaScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Spotify Developer API",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spotify,
+    source_code_link: "https://github.com/bamjam101/vanilla-spotify-clone",
+    web_url: "https://spotify-clone-dev-js.netlify.app",
+  },
+  {
+    name: "Quimzz - A game app",
+    description:
+      "A quiz interface designed to prompt users with 5 questions each round. The user interface brings a great experience for users to interact and play quizzes. The questions are categorized and comes directly from database (MongoDB).",
+    tags: [
+      {
+        name: "HTML, CSS, and JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "NodeJs, ExpressJS, and EJS",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+    ],
+    image: quimzz,
+    source_code_link: "https://github.com/bamjam101/baytrend-ecommerce-app",
+    web_url: "https://bamjam101.github.io/quimzz-frontend/",
   },
 ];
 
