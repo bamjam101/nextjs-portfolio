@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         {children}
-        <footer className="relative z-0">
+        <footer className="relative z-0 bg-black-100">
           <Contact />
           <StarsCanvas />
         </footer>
