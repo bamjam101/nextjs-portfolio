@@ -145,7 +145,7 @@ const testimonials = [
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "",
   },
 ];
 
@@ -182,7 +182,7 @@ const projects = [
     web_url: "https://nextjs-reddit-clone-60nrmxvqb-bamjam101.vercel.app",
   },
   {
-    name: "Real-time Messenger Clone",
+    name: "Messenger Clone",
     description:
       "A full-stack implementation of messenger web application that provides user interface following responsive design with real-time sending and receiving of messages.",
     tags: [
@@ -238,7 +238,7 @@ const projects = [
     web_url: "https://netflix-clone-dev-js.netlify.app/",
   },
   {
-    name: "Baytrend - Ecommerce Site",
+    name: "Baytrend - Ecommerce",
     description:
       "An E-commerce site which effectively fetches data from fakestore API and displays beautifully using Material UI Design Components. The site features a feed where users can select items and add them to cart which is stored in store and locally on client machine using Redux Toolkit.",
     tags: [
@@ -262,7 +262,7 @@ const projects = [
   {
     name: "Spotify Clone",
     description:
-      "A music streaming application totally build using Vanilla JavaScript and Tailwindcss. The application requires users to have an API key for themselves using which they can authenticate their own Spotify account and fetch data as per their preference in a secure manner. The application features fetching of playlists and playing of music preview (30 second preview) out of those playlist.",
+      "A music streaming application totally build using Vanilla JavaScript and Tailwindcss. The application requires users to have an API key for themselves using which they can authenticate their own Spotify account and fetch data as per their preference in a secure manner.",
     tags: [
       {
         name: "Vite",

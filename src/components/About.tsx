@@ -52,11 +52,14 @@ const About: React.FC = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-8"
       >
-        {`a)	Full-stack web development [ HTML5 | CSS3 | JS | ECMAScript | ReactJS | NodeJS | MongoDB | NextJS ]`}
+        {`Greeting! I am a full-stack web development aspirant. I have experience in full stack development.`}{" "}
         <br />
-        {`b)	WEB3 development [ Ethereum | Solidity | EVM | EthersJS | Hardhat ]`}
+        {`🔖 I was recently a part of TEDxACE committe where I worked for developing the official website of TEDxACE 2022-23. It has been very fortunate for me to be promoted as co-organizer of the committee for 2023-24 edition because of my immense contribution. After that I completed a full stack freelance project for a tech agency in Mumbai.`}{" "}
         <br />
-        {`c)	Additionally, utilities such as [ SCSS | Tailwindcss | Material UI | Chakra UI ]`}
+        {`🧑‍💻 Experienced fullstack developer, specialized in MERN stack.`}{" "}
+        <br />
+        {`🤝 Open to work and contribute in frontend specific projects.`} <br />
+        {`💻 Currently, I am exploring Blockchain and Web3.`} <br />
       </motion.p>
 
       <div className="mt-20 flex justify-center items-center flex-wrap gap-10">

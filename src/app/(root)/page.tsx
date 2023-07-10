@@ -1,4 +1,13 @@
-import { About, Experience, Feedbacks, Hero, Tech, Works } from "@/components";
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  StarsCanvas,
+  Tech,
+  Works,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -10,7 +19,11 @@ export default function Home() {
       <Experience />
       <Tech />
       <Works />
-      <Feedbacks />
+      {/* <Feedbacks /> */}
+      <footer className="relative z-0 bg-primary">
+        <Contact />
+        <StarsCanvas />
+      </footer>
     </main>
   );
 }
