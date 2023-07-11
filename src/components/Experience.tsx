@@ -32,7 +32,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <Image src={experience.icon} alt={experience.company_name} fill />
+        <Image
+          src={experience.icon}
+          alt={experience.company_name}
+          fill
+          sizes="100%"
+        />
       </div>
     }
   >

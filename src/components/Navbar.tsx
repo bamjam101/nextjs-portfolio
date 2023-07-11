@@ -53,7 +53,7 @@ const Navbar = () => {
                 active === link.title.toLocaleLowerCase()
                   ? "text-white"
                   : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white sm:text-sm lg:text-[18px] font-medium cursor-pointer`}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>

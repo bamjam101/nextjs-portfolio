@@ -29,9 +29,18 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
-        <div className="relative w-full h-[230px]">
-          <Image fill src={project.image} alt="Project Image" />
+      <Tilt
+        transitionSpeed={450}
+        className="h-full relative bg-tertiary rounded-2xl flex flex-col w-full justify-center gap-1 p-2 sm:p-4"
+      >
+        <figure className="grid place-items-center w-full">
+          <Image
+            width={340}
+            height={230}
+            className="rounded-2xl"
+            src={project.image}
+            alt="Project Image"
+          />
           <div className="absolute inset-0 flex justify-end m-3 card-image_hover gap-2">
             <div
               onClick={() => window.open(project.source_code_link, "_blank")}
@@ -53,26 +62,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
                 width={20}
                 height={20}
                 src={link}
-                alt="Github"
+                alt="Website link"
                 className="hover:scale-105 rounded-full"
               />
             </div>
           </div>
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{project.name}</h3>
-          <p className="text-[14px] text-secondary mt-2">
-            {project.description}
-          </p>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
+        </figure>
+        <h2 className="text-base md:text-xl font-bold mt-2">{project.name}</h2>
+        <p className="text-secondary text-sm md:text-md">
+          {project.description}
+        </p>
+        <p className="flex flex-wrap">
           {project.tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            <span key={tag.name} className={`${tag.color} text-xs mr-1`}>
               #{tag.name}
-            </p>
+            </span>
           ))}
-        </div>
+        </p>
       </Tilt>
     </motion.div>
   );
@@ -88,17 +94,22 @@ const Works = () => {
       <div className="w-full h-full">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-secondary text-xs sm:text-sm md:text-base lg:text-md max-w-3xl leading-8"
         >
           Following are a few projects out of my project basket that shines out.
-          I have dedicated my time and effort in constantly learning
-          technologies and upgrading my project list. It reflects my versatile
-          nature when it comes to frontend development and also my familarity
-          with backend development. I hope you will like this, have fun using
-          few of these projects as per your liking.
+          <span className="hidden sm:inline">
+            I have dedicated my time and effort in constantly learning
+            technologies and upgrading my project list.
+          </span>{" "}
+          These projects reflect my versatile nature when it comes to frontend
+          development and also my familarity with backend development.{" "}
+          <span className="hidden sm:inline">
+            I hope you will like this, have fun using few of these projects as
+            per your liking.
+          </span>
         </motion.p>
 
-        <div className="mt-20 flex justify-center items-center flex-wrap gap-4 md:gap-7">
+        <div className="mt-20 w-full h-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {projects.map((project, index) => (
             <ProjectCard
               key={`project-${index}`}
