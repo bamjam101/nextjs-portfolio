@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         transitionSpeed={450}
-        className="h-full relative bg-tertiary rounded-2xl flex flex-col w-full justify-center gap-1 p-2 sm:p-4"
+        className="h-full relative bg-tertiary rounded-2xl flex flex-col w-full justify-between gap-1 p-2 sm:p-4"
       >
         <figure className="grid place-items-center w-full">
           <Image
@@ -68,11 +68,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             </div>
           </div>
         </figure>
-        <h2 className="text-base md:text-xl font-bold mt-2">{project.name}</h2>
-        <p className="text-secondary text-sm md:text-md">
+        <h2 className="text-sm sm:text-md md:text-lg font-bold mt-2">
+          {project.name}
+        </h2>
+        <p className="text-secondary text-xs sm:text-base md:text-md">
           {project.description}
         </p>
-        <p className="flex flex-wrap">
+        <p className="flex text-xs md:text-sm flex-wrap">
           {project.tags.map((tag) => (
             <span key={tag.name} className={`${tag.color} text-xs mr-1`}>
               #{tag.name}
@@ -102,7 +104,7 @@ const Works = () => {
             technologies and upgrading my project list.
           </span>{" "}
           These projects reflect my versatile nature when it comes to frontend
-          development and also my familarity with backend development.{" "}
+          development and also my familarity with backend development.
           <span className="hidden sm:inline">
             I hope you will like this, have fun using few of these projects as
             per your liking.

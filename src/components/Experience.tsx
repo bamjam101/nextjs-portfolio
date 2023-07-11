@@ -42,9 +42,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (
     }
   >
     <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+      <h3 className="text-white text-base md:text-md font-bold">
+        {experience.title}
+      </h3>
       <p
-        className="text-secondary text-[16px] font-semibold"
+        className="text-secondary text-sm md:text-base font-semibold"
         style={{ margin: 0 }}
       >
         {experience.company_name}
@@ -54,7 +56,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (
       {experience.points.map((point, index) => (
         <li
           key={`experience-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
+          className="text-white-100 text-xs md:text-sm pl-1 tracking-wider"
         >
           {point}
         </li>

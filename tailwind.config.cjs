@@ -25,6 +25,16 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/herobg.png')",
       },
+      animation: {
+        "type-writer": "typing 4s ease-in-out infinite",
+      },
+      keyframes: {
+        typing: {
+          "0%": { width: "0" },
+          "50%": { width: "100%" },
+          "100%": { widht: "0" },
+        },
+      },
     },
   },
   plugins: [],
