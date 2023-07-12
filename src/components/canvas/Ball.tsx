@@ -16,7 +16,7 @@ const Ball = (props: any) => {
 
   return (
     // @ts-ignore
-    <Float scale={1} speed={1.75} rotationIntensity={0.5} floatIntensity={2}>
+    <Float scale={1} speed={0.5} rotationIntensity={0.1} floatIntensity={1}>
       <ambientLight intensity={0.2} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>

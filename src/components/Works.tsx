@@ -31,12 +31,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         transitionSpeed={450}
-        className="h-full relative bg-tertiary rounded-2xl flex flex-col w-full justify-between gap-1 p-2 sm:p-4"
+        className="h-full relative bg-tertiary rounded-2xl flex flex-col w-full justify-between gap-4 mg:gap-7 p-2 sm:p-4"
       >
-        <figure className="grid place-items-center w-full">
+        <figure className="relative grid h-[230px] place-items-center w-full">
           <Image
-            width={340}
-            height={230}
+            fill
             className="rounded-2xl"
             src={project.image}
             alt="Project Image"
