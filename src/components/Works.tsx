@@ -20,8 +20,8 @@ type ProjectCardProps = {
       name: string;
       color: string;
     }[];
-    image: StaticImageData;
-    source_code_link: string;
+    image: string | StaticImageData;
+    source_code_link?: string;
     web_url: string;
   };
 };
@@ -41,18 +41,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
             alt="Project Image"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-image_hover gap-2">
-            <div
-              onClick={() => window.open(project.source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <Image
-                width={20}
-                height={20}
-                src={github}
-                alt="Github"
-                className="hover:scale-105"
-              />
-            </div>
+            {project?.source_code_link ? (
+              <div
+                onClick={() => window.open(project.source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <Image
+                  width={20}
+                  height={20}
+                  src={github}
+                  alt="Github"
+                  className="hover:scale-105"
+                />
+              </div>
+            ) : null}
             <div
               onClick={() => window.open(project.web_url, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"

@@ -150,21 +150,41 @@ const testimonials = [
 ];
 
 const projects = [
+  // {
+  //   name: "Reddit clone",
+  //   description:
+  //     "A social media platform such as Reddit for creating communities and posting insightful posts.",
+  //   tags: [
+  //     {
+  //       name: "next",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "firebase",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "tailwind",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "recoil",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: reddit,
+  //   web_url: "https://devjam-reddit-clone.vercel.com",
+  // },
   {
-    name: "Reddit Clone",
-    description:
-      "A replication of Reddit with subset of features integrated to provide a full-stack experience. Get indulged in community activities much like Reddit subreddit and browse across posts relating to different subreddit.",
+    name: "Heyoo",
+    description: "A social media platform's portfolio with CMS capabilities.",
     tags: [
       {
         name: "next",
         color: "blue-text-gradient",
       },
       {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "firebase",
+        name: "mongodb",
         color: "blue-text-gradient",
       },
       {
@@ -175,11 +195,71 @@ const projects = [
         name: "recoil",
         color: "blue-text-gradient",
       },
-      { name: "chakra", color: "green-text-gradient" },
+      { name: "socket.io", color: "green-text-gradient" },
+      { name: "Microsoft Azure - App Service", color: "green-text-gradient" },
     ],
-    image: reddit,
-    source_code_link: "https://github.com/bamjam101/nextjs-reddit-clone",
-    web_url: "https://nextjs-reddit-clone-60nrmxvqb-bamjam101.vercel.app",
+    image: "/heyoo.png",
+    web_url: "https://heyoo.in",
+  },
+  {
+    name: "Hastishah - Portfolio",
+    description:
+      "An artist portfolio with CMS capabilities for managing full-fledged photograhy and videography content.",
+    tags: [
+      {
+        name: "next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "recoil",
+        color: "blue-text-gradient",
+      },
+      { name: "typscript", color: "green-text-gradient" },
+      {
+        name: "AWS Amplify",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: "/hastishah.png",
+    web_url: "https://hastishah.in",
+  },
+  {
+    name: "Discord Clone",
+    description:
+      "A full-stack implementation of discord web application that provides user interface following responsive design with real-time socket based communication and server management.",
+    tags: [
+      {
+        name: "next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "prisma",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "socket.io",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "/discord.png",
+    source_code_link: "https://github.com/bamjam101/nextjs-discord-clone",
+    web_url: "https://devjam-discord.vercel.app/",
   },
   {
     name: "Messenger Clone",
@@ -209,7 +289,7 @@ const projects = [
     ],
     image: messenger,
     source_code_link: "https://github.com/bamjam101/nextjs-messenger-clone",
-    web_url: "https://nextjs-messenger-clone-flame.vercel.app",
+    web_url: "https://devjam-messenger.vercel.app/",
   },
   {
     name: "Netflix Clone",
@@ -235,52 +315,30 @@ const projects = [
     ],
     image: netflix,
     source_code_link: "https://github.com/bamjam101/netflix-clone",
-    web_url: "https://netflix-clone-dev-js.netlify.app/",
+    web_url: "https://netflixplayer.vercel.app/",
   },
-  {
-    name: "Baytrend - Ecommerce",
-    description:
-      "An E-commerce site which effectively fetches data from fakestore API and displays beautifully using Material UI Design Components. The site features a feed where users can select items and add them to cart which is stored in store and locally on client machine using Redux Toolkit.",
-    tags: [
-      {
-        name: "react",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MUI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Redux",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: baytrend,
-    source_code_link: "https://github.com/bamjam101/baytrend-ecommerce-app",
-    web_url: "https://baytrend-dev-js.netlify.app/",
-  },
-  {
-    name: "Spotify Clone",
-    description:
-      "A music streaming application totally build using Vanilla JavaScript and Tailwindcss. The application requires users to have an API key for themselves using which they can authenticate their own Spotify account and fetch data as per their preference in a secure manner.",
-    tags: [
-      {
-        name: "Vite",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Vanilla JavaScript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Spotify Developer API",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: spotify,
-    source_code_link: "https://github.com/bamjam101/vanilla-spotify-clone",
-    web_url: "https://spotify-clone-dev-js.netlify.app",
-  },
+  // {
+  //   name: "Baytrend - Ecommerce",
+  //   description:
+  //     "An E-commerce site which effectively fetches data from fakestore API and displays beautifully using Material UI Design Components. The site features a feed where users can select items and add them to cart which is stored in store and locally on client machine using Redux Toolkit.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "pink-text-gradient",
+  //     },
+  //     {
+  //       name: "MUI",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "Redux",
+  //       color: "blue-text-gradient",
+  //     },
+  //   ],
+  //   image: baytrend,
+  //   source_code_link: "https://github.com/bamjam101/baytrend-ecommerce-app",
+  //   web_url: "https://baytrend-dev-js.netlify.app/",
+  // },
   {
     name: "Quimzz - A game app",
     description:
