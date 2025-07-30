@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 import Tilt from "react-parallax-tilt";
 
-import { styles } from "@/app/styles";
 import { github, link } from "@/app/assets";
-import { SectionWrapper } from "@/hoc";
+import { styles } from "@/app/styles";
 import { projects } from "@/constants";
+import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import Image, { StaticImageData } from "next/image";
 
@@ -72,7 +72,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, project }) => {
         <h2 className="text-sm sm:text-md md:text-lg font-bold mt-2">
           {project.name}
         </h2>
-        <p className="text-secondary text-xs sm:text-base md:text-md">
+        <p
+          className="text-secondary text-xs sm:text-base md:text-md line-clamp-5"
+          title={project.description}
+        >
           {project.description}
         </p>
         <p className="flex text-xs md:text-sm flex-wrap">

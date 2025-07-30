@@ -1,13 +1,13 @@
 "use client";
 
+import { styles } from "@/app/styles";
+import { services } from "@/constants";
+import { SectionWrapper } from "@/hoc";
+import { fadeIn, textVariant } from "@/utils/motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 import Tilt from "react-parallax-tilt";
-import { motion } from "framer-motion";
-import { styles } from "@/app/styles";
-import { fadeIn, textVariant } from "@/utils/motion";
-import { services } from "@/constants";
-import Image from "next/image";
-import { SectionWrapper } from "@/hoc";
 
 type ServiceCardProps = {
   index: number;
@@ -50,18 +50,20 @@ const About: React.FC = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-xs sm:text-sm md:text-base lg:text-md max-w-3xl leading-8"
+        className="mt-6 text-secondary text-xs sm:text-sm md:text-base lg:text-lg max-w-3xl leading-relaxed space-y-4"
       >
-        {`Greeting! I am a full-stack web development aspirant. I have experience in full stack development.`}
-        <br />
-        {`🔖 I was recently a part of TEDxACE committe where I worked for developing the official website of TEDxACE 2022-23. It has been very fortunate for me to be promoted as co-organizer of the committee for 2023-24 edition because of my immense contribution.`}
-        <br />
-        <span className="hidden sm:inline">
-          {`🧑‍💻 Experienced fullstack developer, specialized in MERN stack.`}
+        <span className="block mb-4">
+          {`I'm a full-stack software engineer with experience in building scalable, production-grade systems across web and mobile platforms. From backend infrastructure to frontend user interfaces, I focus on delivering impactful digital solutions that are both maintainable and user-friendly.`}
         </span>
-        <br />
-        {`🤝 Open to work and contribute in frontend specific projects.`} <br />
-        {`💻 Currently, I am exploring Blockchain and Web3.`}
+        <span className="block mb-4">
+          {`As a former Web Lead at TEDxACE and GDSC, I’ve actively mentored developers and led technical initiatives in fast-paced, team-driven environments.`}
+        </span>
+        <span className="hidden sm:block mb-4">
+          {`Currently working as a Senior Backend Developer at Bartergram, I contribute across the stack—architecting APIs, building internal tools, and deploying real-world apps.`}
+        </span>
+        <span className="block">
+          {`I’m open to collaborating on forward-thinking projects, especially where thoughtful design meets robust engineering.`}
+        </span>
       </motion.p>
 
       <div className="mt-20 flex justify-center items-center flex-wrap gap-10">

@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 
 import { styles } from "@/app/styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "@/hoc";
 import { slideIn } from "@/utils/motion";
+import { EarthCanvas } from "./canvas";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -19,6 +19,10 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
   const handleFormDataChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,8 +33,48 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setLoading(true);
+    setFeedback({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setFeedback({
+          type: "success",
+          message: data.message || "Message sent successfully!",
+        });
+        setForm({ name: "", email: "", message: "" });
+      } else if (response.status === 429) {
+        // Rate limited
+        setFeedback({
+          type: "error",
+          message: data.error || "Too many requests. Please try again later.",
+        });
+      } else {
+        setFeedback({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setFeedback({
+        type: "error",
+        message: "Network error. Please check your connection and try again.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse gap-2 md:gap-10 flex overflow-hidden">
@@ -40,6 +84,19 @@ const Contact = () => {
       >
         <p className={`${styles.sectionSubText}`}>Get in touch</p>
         <h2 className={`${styles.sectionHeadText}`}>Contact.</h2>
+
+        {feedback.type && (
+          <div
+            className={`mt-4 p-4 rounded-lg ${
+              feedback.type === "success"
+                ? "bg-green-900/20 border border-green-500 text-green-400"
+                : "bg-red-900/20 border border-red-500 text-red-400"
+            }`}
+          >
+            {feedback.message}
+          </div>
+        )}
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -53,7 +110,8 @@ const Contact = () => {
               value={form.name}
               onChange={handleFormDataChange}
               placeholder="What's Your Name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg oulined-none border-none font-medium"
+              disabled={loading}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg oulined-none border-none font-medium disabled:opacity-50"
             />
           </label>
           <label className="flex flex-col">
@@ -64,7 +122,8 @@ const Contact = () => {
               value={form.email}
               onChange={handleFormDataChange}
               placeholder="What's Your Email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg oulined-none border-none font-medium"
+              disabled={loading}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg oulined-none border-none font-medium disabled:opacity-50"
             />
           </label>
           <label className="flex flex-col">
@@ -75,12 +134,14 @@ const Contact = () => {
               name={"message"}
               value={form.message}
               placeholder="Let's talk about something, shall we?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg oulined-none border-none font-medium resize-none"
+              disabled={loading}
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg oulined-none border-none font-medium resize-none disabled:opacity-50"
             />
           </label>
           <button
-            className="bg-tertiary py-3 px-8 outline-none w-fit font-bold text-white shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary py-3 px-8 outline-none w-fit font-bold text-white shadow-md shadow-primary rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
             type="submit"
+            disabled={loading}
           >
             {loading ? "Sending..." : "Send"}
           </button>

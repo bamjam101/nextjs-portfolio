@@ -1,27 +1,20 @@
 import {
   backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
+  bartergramLogo,
+  boringstudioLogo,
   css,
+  figma,
+  git,
+  html,
+  javascript,
+  mongodb,
+  nodejs,
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  tedx,
-  mobile,
-  reddit,
-  messenger,
-  baytrend,
-  netflix,
-  spotify,
-  quimzz,
   threejs,
+  typescript,
+  web,
 } from "../app/assets";
 
 export const navLinks = [
@@ -51,10 +44,6 @@ const services = [
   {
     title: "Backend Developer",
     icon: backend,
-  },
-  {
-    title: "Blockchain Developer",
-    icon: creator,
   },
 ];
 
@@ -111,29 +100,27 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full stack Developer (MERN)",
-    company_name: "Outsourced Work",
-    icon: mobile,
+    title: "Senior Backend Developer & Tech Lead",
+    company_name: "Bartergram LLP",
+    icon: bartergramLogo,
     iconBg: "#383E56",
-    date: "Dec 2022 - Feb 2023",
+    date: "Jul 2024 – Present",
     points: [
-      "Developing and maintaining web applications using React.js and other MERN stack technologies.",
-      "Employing required skills for development of full-stack application.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Debugging, optimizing and providing constructive feedback to project provider.",
+      "Led the development of Bartergram’s mobile and web platforms with complete backend architecture and AWS infrastructure setup.",
+      "Built internal tools and admin dashboards with role-based access to streamline business operations.",
+      "Deployed production-ready systems to App Store, Play Store, and web.",
     ],
   },
   {
-    title: "ReactJS Developer",
-    company_name: "TEDxACE",
-    icon: tedx,
+    title: "Full-Stack Developer Intern",
+    company_name: "The Boring Studio",
+    icon: boringstudioLogo,
     iconBg: "#E6DEDD",
-    date: "Feb 2023 - March 2023",
+    date: "Jul 2023 – Jul 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Integrating state management tools for effective data-flow.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Migrated backend services from JavaScript to TypeScript, improving maintainability.",
+      "Built real-time internal dashboards using WebSockets and Azure Event Hubs.",
+      "Contributed to full-stack development of client projects and company website.",
     ],
   },
 ];
@@ -150,34 +137,41 @@ const testimonials = [
 ];
 
 const projects = [
-  // {
-  //   name: "Reddit clone",
-  //   description:
-  //     "A social media platform such as Reddit for creating communities and posting insightful posts.",
-  //   tags: [
-  //     {
-  //       name: "next",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "firebase",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "recoil",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //   image: reddit,
-  //   web_url: "https://devjam-reddit-clone.vercel.com",
-  // },
+  {
+    name: "Predictye – AI Resale Estimator",
+    description:
+      "A full-stack platform for predicting resale value of second-hand items. Features dynamic chat, image uploads, and category-specific workflows for furniture, jewelry, and more.",
+    tags: [
+      { name: "next.js", color: "blue-text-gradient" },
+      { name: "prisma", color: "green-text-gradient" },
+      { name: "mongodb", color: "blue-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "vercel", color: "green-text-gradient" },
+    ],
+    image: "/predictye-poster.png",
+    web_url: "https://predictye.vercel.app",
+  },
+  {
+    name: "Bartergram – Web & Mobile",
+    description:
+      "A production-ready ecosystem for influencer-brand matchmaking, campaign management, and internal tooling. Includes web admin dashboard and cross-platform mobile app.",
+    tags: [
+      { name: "next.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+      { name: "react native", color: "blue-text-gradient" },
+      { name: "aws", color: "blue-text-gradient" },
+      { name: "prisma", color: "green-text-gradient" },
+      { name: "postgresql", color: "green-text-gradient" },
+      { name: "expo", color: "pink-text-gradient" },
+    ],
+    image: "/bartergram-poster.png",
+    web_url: "https://www.bartergram.co",
+  },
   {
     name: "Heyoo",
-    description: "A social media platform's portfolio with CMS capabilities.",
+    description:
+      "A social media portfolio platform with CMS features, real-time chat, and scalable backend. Built with Next.js, MongoDB, Tailwind, Recoil, and Azure App Service.",
     tags: [
       {
         name: "next",
@@ -201,166 +195,6 @@ const projects = [
     image: "/heyoo.png",
     web_url: "https://heyoo.in",
   },
-  {
-    name: "Hastishah - Portfolio",
-    description:
-      "An artist portfolio with CMS capabilities for managing full-fledged photograhy and videography content.",
-    tags: [
-      {
-        name: "next",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "recoil",
-        color: "blue-text-gradient",
-      },
-      { name: "typscript", color: "green-text-gradient" },
-      {
-        name: "AWS Amplify",
-        color: "blue-text-gradient",
-      },
-    ],
-    image: "/hastishah.png",
-    web_url: "https://hastishah.in",
-  },
-  {
-    name: "Discord Clone",
-    description:
-      "A full-stack implementation of discord web application that provides user interface following responsive design with real-time socket based communication and server management.",
-    tags: [
-      {
-        name: "next",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "prisma",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "socket.io",
-        color: "green-text-gradient",
-      },
-    ],
-    image: "/discord.png",
-    source_code_link: "https://github.com/bamjam101/nextjs-discord-clone",
-    web_url: "https://devjam-discord.vercel.app/",
-  },
-  {
-    name: "Messenger Clone",
-    description:
-      "A full-stack implementation of messenger web application that provides user interface following responsive design with real-time sending and receiving of messages.",
-    tags: [
-      {
-        name: "next",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "prisma",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "pusher",
-        color: "green-text-gradient",
-      },
-    ],
-    image: messenger,
-    source_code_link: "https://github.com/bamjam101/nextjs-messenger-clone",
-    web_url: "https://devjam-messenger.vercel.app/",
-  },
-  {
-    name: "Netflix Clone",
-    description:
-      "A lite build of Neflix with features to facilitate users to watch movie previews being fetched from TMDB library mapping to Youtube trailer videos. Enjoy creating user profiles and switching between them as per liking due optimized state management.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "contextapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tmdbapi",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: netflix,
-    source_code_link: "https://github.com/bamjam101/netflix-clone",
-    web_url: "https://netflixplayer.vercel.app/",
-  },
-  // {
-  //   name: "Baytrend - Ecommerce",
-  //   description:
-  //     "An E-commerce site which effectively fetches data from fakestore API and displays beautifully using Material UI Design Components. The site features a feed where users can select items and add them to cart which is stored in store and locally on client machine using Redux Toolkit.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "MUI",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "Redux",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //   image: baytrend,
-  //   source_code_link: "https://github.com/bamjam101/baytrend-ecommerce-app",
-  //   web_url: "https://baytrend-dev-js.netlify.app/",
-  // },
-  {
-    name: "Quimzz - A game app",
-    description:
-      "A quiz interface designed to prompt users with 5 questions each round. The user interface brings a great experience for users to interact and play quizzes. The questions are categorized and comes directly from database (MongoDB).",
-    tags: [
-      {
-        name: "HTML, CSS, and JS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "NodeJs, ExpressJS, and EJS",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
-    ],
-    image: quimzz,
-    source_code_link: "https://github.com/bamjam101/baytrend-ecommerce-app",
-    web_url: "https://bamjam101.github.io/quimzz-frontend/",
-  },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { experiences, projects, services, technologies, testimonials };
